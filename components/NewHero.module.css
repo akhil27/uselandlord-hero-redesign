@@ -216,10 +216,10 @@
 }
 
 .trustLabel {
-  color: rgba(8, 21, 4, 0.42);
-  font-size: 9px;
+  color: rgba(8, 21, 4, 0.52);
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.135em;
+  letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -381,6 +381,22 @@
 
   .visual {
     padding: 0 4px 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .logos {
+    gap: 10px 14px;
+  }
+
+  .logo {
+    height: 20px;
+    max-width: 68px;
+  }
+
+  .logoCompact {
+    height: 16px;
+    max-width: 62px;
   }
 }
 

@@ -43,14 +43,6 @@ export function PlayIcon(props: IconProps) {
   );
 }
 
-export function ChevronDownIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
-
 export function CheckIcon(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -111,14 +103,6 @@ export function MailIcon(props: IconProps) {
   );
 }
 
-export function ChatIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="M20.5 11.5a7.8 7.8 0 0 1-8 7.6 8.7 8.7 0 0 1-3.7-.8L4 20l1.6-4a7.4 7.4 0 0 1-.9-3.5 7.8 7.8 0 0 1 8-7.6 7.8 7.8 0 0 1 7.8 7.6Z" />
-    </svg>
-  );
-}
-
 export function WhatsAppIcon(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -146,22 +130,6 @@ export function SearchIcon(props: IconProps) {
   );
 }
 
-export function FilterIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="M4 7h16M7 12h10M10 17h4" />
-    </svg>
-  );
-}
-
-export function PaperclipIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <path d="m20 11.5-7.9 7.9a5 5 0 0 1-7-7l8.6-8.6a3.3 3.3 0 0 1 4.6 4.6l-8.5 8.5a1.7 1.7 0 0 1-2.4-2.4l7.8-7.8" />
-    </svg>
-  );
-}
-
 export function MoreIcon(props: IconProps) {
   return (
     <svg {...base(props)}>
@@ -177,15 +145,6 @@ export function BuildingIcon(props: IconProps) {
     <svg {...base(props)}>
       <path d="M4 20V6.5L12 3l8 3.5V20" />
       <path d="M2.5 20h19M8 9h1.5M8 12.5h1.5M8 16h1.5M14.5 9H16M14.5 12.5H16M14.5 16H16" />
-    </svg>
-  );
-}
-
-export function KeyIcon(props: IconProps) {
-  return (
-    <svg {...base(props)}>
-      <circle cx="8" cy="15.5" r="4" />
-      <path d="m11 12.5 8-8M16 3.5l4 4M14 5.5l4 4" />
     </svg>
   );
 }

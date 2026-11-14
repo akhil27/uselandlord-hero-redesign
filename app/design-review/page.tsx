@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { BrowserChrome } from "@/components/BrowserChrome";
-import { LivePreview } from "@/components/LivePreview";
+import { BeforeAfter } from "@/components/BeforeAfter";
 import { PhonePreview } from "@/components/PhonePreview";
 import { ProductPreview } from "@/components/ProductPreview";
 import {
@@ -50,15 +49,15 @@ const reasons = [
   {
     number: "01",
     icon: TargetIcon,
-    title: "The category lands first.",
+    title: "Clearer positioning",
     body:
-      "“AI employees for self storage” sits above the headline. Within one beat, a visitor knows what Landlord is and who it is for — before reading a single benefit.",
+      "The category sits above the headline: “AI employees for self storage.” A visitor knows what Landlord is and who it is for before reading a single benefit.",
     evidence: "Eyebrow + headline",
   },
   {
     number: "02",
     icon: LayersIcon,
-    title: "The product is the proof.",
+    title: "Product proof",
     body:
       "Instead of describing 24/7 coverage, the hero shows it: an AI employee answering a WhatsApp inquiry after hours, holding a unit, and sending the rental link.",
     evidence: "Inbox visualization",
@@ -66,7 +65,7 @@ const reasons = [
   {
     number: "03",
     icon: ArrowRightIcon,
-    title: "The next step is obvious.",
+    title: "Stronger conversion path",
     body:
       "One dominant green CTA replaces two similar-weight buttons. “See How It Works” stays available for visitors who need more evidence before they book.",
     evidence: "CTA hierarchy",
@@ -74,9 +73,9 @@ const reasons = [
   {
     number: "04",
     icon: CheckCircleIcon,
-    title: "Trust arrives earlier.",
+    title: "Greater trust",
     body:
-      "Real customer logos sit directly beneath the action, using proof Landlord already has — not a new statistic, claim, or invented endorsement.",
+      "Real customer logos sit directly beneath the action, using proof Landlord already has rather than a new statistic, claim, or invented endorsement.",
     evidence: "Customer proof",
   },
 ];
@@ -265,102 +264,11 @@ export default function DesignReviewPage() {
               ))}
             </div>
 
-            <div className={styles.stack}>
-              <article className={styles.designBlock}>
-                <header className={styles.blockHead}>
-                  <div className={styles.blockLabel}>
-                    <span className={styles.dotBefore} />
-                    Current design
-                    <span className={styles.tagBefore}>Before</span>
-                  </div>
-                  <span className={styles.blockMeta}>uselandlord.com · desktop 1440px</span>
-                </header>
-
-                <div className={styles.screenshotFrame}>
-                  <BrowserChrome url="uselandlord.com" />
-                  <img
-                    src="/screens/current-hero-desktop.png"
-                    alt="The current Landlord homepage hero: “Stop losing leads after hours.” with two CTAs and a James Bonny testimonial video."
-                    width={1440}
-                    height={572}
-                    loading="eager"
-                  />
-                </div>
-
-                <div className={styles.observations}>
-                  <div>
-                    <span>01</span>
-                    <p>
-                      <strong>Pain, not product.</strong> The headline names the problem, but a
-                      first-time visitor never learns what Landlord is.
-                    </p>
-                  </div>
-                  <div>
-                    <span>02</span>
-                    <p>
-                      <strong>Proof is passive.</strong> A founder video carries the entire product
-                      story, so the experience has to be watched to be understood.
-                    </p>
-                  </div>
-                  <div>
-                    <span>03</span>
-                    <p>
-                      <strong>Actions compete.</strong> Two similar-weight CTAs make the next step
-                      feel optional instead of obvious.
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <div className={styles.stackDivider} aria-hidden="true">
-                <span />
-                <i>The redesign</i>
-                <span />
-              </div>
-
-              <article className={`${styles.designBlock} ${styles.afterBlock}`}>
-                <header className={styles.blockHead}>
-                  <div className={styles.blockLabel}>
-                    <span className={styles.dotAfter} />
-                    Proposed design
-                    <span className={styles.tagAfter}>After</span>
-                  </div>
-                  <span className={styles.blockMeta}>Live preview · desktop 1440px</span>
-                </header>
-
-                <LivePreview
-                  src="/hero-preview"
-                  width={1440}
-                  height={741}
-                  url="uselandlord.com"
-                  label="Proposed Landlord hero — live desktop preview"
-                />
-
-                <div className={`${styles.observations} ${styles.observationsAfter}`}>
-                  <div>
-                    <span>01</span>
-                    <p>
-                      <strong>Category + outcome.</strong> “AI employees for self storage” and “never
-                      clocks out” land together, in a single glance.
-                    </p>
-                  </div>
-                  <div>
-                    <span>02</span>
-                    <p>
-                      <strong>Proof is active.</strong> The inbox shows an after-hours inquiry being
-                      resolved, not just described.
-                    </p>
-                  </div>
-                  <div>
-                    <span>03</span>
-                    <p>
-                      <strong>One obvious next step.</strong> A dominant green CTA, a lower-commitment
-                      secondary path, and real logos at the point of doubt.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
+            <BeforeAfter
+              beforeSrc="/screens/current-hero-desktop.png"
+              beforeAlt="The current Landlord homepage hero: “Stop losing leads after hours,” two CTAs, and a James Bonny testimonial video."
+              afterSrc="/hero-preview"
+            />
           </div>
         </section>
 
@@ -538,10 +446,10 @@ export default function DesignReviewPage() {
                   <li>
                     <span>03</span>
                     <div>
-                      <strong>Proof survives the fold.</strong>
+                      <strong>Proof stays legible.</strong>
                       <p>
-                        The inbox collapses to the conversation, so the product moment still appears on
-                        the first screen.
+                        The inbox drops the conversation list on narrow screens, so the thread, the held
+                        unit, and the outcome keep their space.
                       </p>
                     </div>
                   </li>
@@ -623,10 +531,11 @@ export default function DesignReviewPage() {
           </div>
         </div>
         <p className={styles.sources}>
-          Source: all copy, customer names, logos, and proof points are drawn from uselandlord.com — the
+          Source: copy, customer names, logos, and proof points are drawn from uselandlord.com — the
           homepage, the Sales &amp; Customer Support page, and the FAQ. The current hero screenshot was
-          captured from the live site. The product conversation is illustrative. The proposed hero is
-          implemented as a live Next.js route at <code>/hero-preview</code>.
+          captured from the live site at 1440 × 851. The product conversation is illustrative: names,
+          phone numbers, locations, availability, and dates are fictional demo data. The proposed hero
+          is implemented as a live Next.js route at <code>/hero-preview</code>.
         </p>
       </footer>
     </div>
