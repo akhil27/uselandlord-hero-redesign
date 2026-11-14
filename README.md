@@ -12,6 +12,11 @@ A focused redesign of the Landlord homepage hero, with a standalone before/after
 | `/design-review` | Before/after comparison, five-second read, rationale, product anatomy, mobile preview, brand continuity |
 | `/hero-preview` | The proposed hero as a live, standalone page (also embedded in the review) |
 
+## Live preview
+
+- [Full design review](https://uselandlord-hero-redesign.onrender.com/design-review/)
+- [Standalone hero preview](https://uselandlord-hero-redesign.onrender.com/hero-preview/)
+
 Both review routes are `noindex, nofollow`. The review embeds `/hero-preview` in a scaled
 iframe so the comparison always reflects the real component, not a static mockup.
 
