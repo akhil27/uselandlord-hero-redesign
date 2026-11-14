@@ -1,0 +1,58 @@
+.phone {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 48px;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.2), transparent 32%),
+    linear-gradient(160deg, #1d2e19 0%, #0a1506 62%, #12220e 100%);
+  box-shadow:
+    0 50px 90px -40px rgba(8, 21, 4, 0.55),
+    0 18px 36px -24px rgba(8, 21, 4, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+    inset 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 39px;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.iframe {
+  display: block;
+  border: 0;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.island {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 50%;
+  width: 72px;
+  height: 19px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #081504;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+.island i {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #21381c;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
